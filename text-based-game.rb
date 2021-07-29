@@ -7,13 +7,13 @@ def print_slow string
 end
 
 def start_story_book
-  intro = "You are stuck on a island"
+  intro = "You are stuck on an island"
   print_slow intro
 end
 
 
 def cookie
-  cookie = "You see a random cookie on the ground. Do you want to eat the cookie? Yes or No "
+  cookie = "You see a random cookie on the ground. Do you want to eat the cookie? Yes or No"
   print_slow cookie
   gets.chomp
 end
@@ -37,7 +37,7 @@ end
 def deep_sea answer
   sea_option = "You see a light. Do you want to swim 'towards' it or 'away'?"
     if answer == "turtles"
-      print_slow "You got lost into the deep sea. #{sea_option}"
+      print_slow "You got lost in the deep sea. #{sea_option}"
     elsif answer == "jellyfish"
       print_slow "You got stung and fell into the deep sea. #{sea_option}"
     end
@@ -61,7 +61,6 @@ def render_ascii artFile
 end
 
 
-
 render_ascii "Beach.txt"
 start_story_book
 answer = cookie
@@ -73,12 +72,15 @@ end
 yes_or_no(answer, "yes", "You can now breathe underwater so you walk in the ocean.", "You gather sea shells and you make a necklace. You wear it and turn into a mermaid! You then go for a dive in the ocean.")
 
 answer = eat_cookie
+
 if answer == "turtles"
   render_ascii "turtle.txt"
 else
   render_ascii "jellyfish.txt"
 end
+
 yes_or_no(answer, "turtles", "Hold on tight! We are going for a swim!", "Oh no! There's too many tentacles!")
+
 answer= deep_sea answer
 
 if answer == "towards"
@@ -90,10 +92,13 @@ end
 yes_or_no(answer, "towards", "You see an angler fish and it starts to chase you", "You see a glowing squid and follow it")
 
 answer = mantaray_dolphin
+
 if answer == 'left'
   render_ascii "mantaray.txt"
 else
   render_ascii "dolphin.txt"
 end
+
 yes_or_no(answer, "left", "You found a manta ray! Ride it to the surface to find shore.", "You found a dolphin! Hold on tight and it will take you to the surface.")
+
 safe
