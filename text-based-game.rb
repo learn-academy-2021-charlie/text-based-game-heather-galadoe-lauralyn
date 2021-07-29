@@ -66,6 +66,18 @@ def dolphin
   end
 end
 
+def manta_ray
+  IO.foreach("mantaray.txt") do |line|
+    puts line
+  end
+end
+
+def turtle
+  IO.foreach("turtle.txt") do |line|
+    puts line
+  end
+end
+
 render_beach
 
 start_story_book
